@@ -1,0 +1,322 @@
+[
+  {
+    "order_id": "ORD-10001",
+    "true_category": "PARTIAL_REFUND",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10002",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10003",
+    "true_category": "FEE_DRIFT",
+    "expected_match_status": "VARIANCE"
+  },
+  {
+    "order_id": "ORD-10004",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10005",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10006",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10007",
+    "true_category": "FEE_DRIFT",
+    "expected_match_status": "VARIANCE"
+  },
+  {
+    "order_id": "ORD-10008",
+    "true_category": "PURE_EXCEPTION",
+    "expected_match_status": "UNMATCHED"
+  },
+  {
+    "order_id": "ORD-10009",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10010",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10011",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10012",
+    "true_category": "PARTIAL_REFUND",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10013",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10014",
+    "true_category": "DUPLICATE",
+    "expected_match_status": "DUPLICATE"
+  },
+  {
+    "order_id": "ORD-10015",
+    "true_category": "DUPLICATE",
+    "expected_match_status": "DUPLICATE"
+  },
+  {
+    "order_id": "ORD-10016",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10017",
+    "true_category": "TIMING_GAP",
+    "expected_match_status": "TIMING_GAP"
+  },
+  {
+    "order_id": "ORD-10018",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10019",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10020",
+    "true_category": "TIMING_GAP",
+    "expected_match_status": "TIMING_GAP"
+  },
+  {
+    "order_id": "ORD-10021",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10022",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10023",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10024",
+    "true_category": "PURE_EXCEPTION",
+    "expected_match_status": "UNMATCHED"
+  },
+  {
+    "order_id": "ORD-10025",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10026",
+    "true_category": "PARTIAL_REFUND",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10027",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10028",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10029",
+    "true_category": "DUPLICATE",
+    "expected_match_status": "DUPLICATE"
+  },
+  {
+    "order_id": "ORD-10030",
+    "true_category": "DUPLICATE",
+    "expected_match_status": "DUPLICATE"
+  },
+  {
+    "order_id": "ORD-10031",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10032",
+    "true_category": "FEE_DRIFT",
+    "expected_match_status": "VARIANCE"
+  },
+  {
+    "order_id": "ORD-10033",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10034",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10035",
+    "true_category": "PARTIAL_REFUND",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10036",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10037",
+    "true_category": "TIMING_GAP",
+    "expected_match_status": "TIMING_GAP"
+  },
+  {
+    "order_id": "ORD-10038",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10039",
+    "true_category": "PARTIAL_REFUND",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10040",
+    "true_category": "PARTIAL_REFUND",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10041",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10042",
+    "true_category": "FEE_DRIFT",
+    "expected_match_status": "VARIANCE"
+  },
+  {
+    "order_id": "ORD-10043",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10044",
+    "true_category": "DUPLICATE",
+    "expected_match_status": "DUPLICATE"
+  },
+  {
+    "order_id": "ORD-10045",
+    "true_category": "DUPLICATE",
+    "expected_match_status": "DUPLICATE"
+  },
+  {
+    "order_id": "ORD-10046",
+    "true_category": "PURE_EXCEPTION",
+    "expected_match_status": "UNMATCHED"
+  },
+  {
+    "order_id": "ORD-10047",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10048",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10049",
+    "true_category": "PARTIAL_REFUND",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10050",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10051",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10052",
+    "true_category": "TIMING_GAP",
+    "expected_match_status": "TIMING_GAP"
+  },
+  {
+    "order_id": "ORD-10053",
+    "true_category": "DUPLICATE",
+    "expected_match_status": "DUPLICATE"
+  },
+  {
+    "order_id": "ORD-10054",
+    "true_category": "DUPLICATE",
+    "expected_match_status": "DUPLICATE"
+  },
+  {
+    "order_id": "ORD-10055",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10056",
+    "true_category": "PURE_EXCEPTION",
+    "expected_match_status": "UNMATCHED"
+  },
+  {
+    "order_id": "ORD-10057",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10058",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10059",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10060",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10061",
+    "true_category": "TIMING_GAP",
+    "expected_match_status": "TIMING_GAP"
+  },
+  {
+    "order_id": "ORD-10062",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10063",
+    "true_category": "CLEAN",
+    "expected_match_status": "MATCHED"
+  },
+  {
+    "order_id": "ORD-10064",
+    "true_category": "PARTIAL_REFUND",
+    "expected_match_status": "MATCHED"
+  }
+]

@@ -1,0 +1,25 @@
+.env# Secrets
+.env
+.env.*
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Generated reconciliation outputs
+data/recon_results.json
+data/recon_summary_table.csv
+data/exception_classifications.json
+data/exception_classifications.csv
+data/llm_exception_explanations.json
+data/accuracy_report.json
+
+# Local archives
+*.zip
+
+# Editor/system files
+.vscode/
+.DS_Store
+Thumbs.db

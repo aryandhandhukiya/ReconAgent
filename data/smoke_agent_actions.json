@@ -1,0 +1,56 @@
+[
+  {
+    "action_id": "ACT-0001",
+    "order_id": "ORD-SMOKE-001",
+    "exception_type": "MISSING_SETTLEMENT",
+    "workflow_status": "Auto-flagged",
+    "decision": "create_finance_task",
+    "priority": "HIGH",
+    "owner": "Finance Ops",
+    "sla_hours": 24,
+    "reason": "No settlement record was seen in the ledger or settlement feed.",
+    "evidence": [
+      "No settlement found for the ledger payment."
+    ],
+    "requires_approval": false,
+    "note": null,
+    "status": "Proposed",
+    "created_at": "2026-08-27T17:24:54.992413+00:00"
+  },
+  {
+    "action_id": "ACT-0001",
+    "order_id": "ORD-SMOKE-001",
+    "decision": "create_finance_task",
+    "status": "Executed",
+    "approval": "Not required",
+    "note": null,
+    "executed_at": "2026-08-27T17:24:55.001914+00:00"
+  },
+  {
+    "action_id": "ACT-0003",
+    "order_id": "ORD-SMOKE-001",
+    "exception_type": "MISSING_SETTLEMENT",
+    "workflow_status": "Auto-flagged",
+    "decision": "investigate_exception",
+    "priority": "HIGH",
+    "owner": "Finance Ops",
+    "sla_hours": 24,
+    "reason": "No settlement record was seen in the ledger or settlement feed.",
+    "evidence": [
+      "No settlement found for the ledger payment."
+    ],
+    "requires_approval": false,
+    "note": null,
+    "status": "Proposed",
+    "created_at": "2026-08-31T10:07:28.322139+00:00"
+  },
+  {
+    "action_id": "ACT-0003",
+    "order_id": "ORD-SMOKE-001",
+    "decision": "investigate_exception",
+    "status": "Executed",
+    "approval": "Not required",
+    "note": null,
+    "executed_at": "2026-08-31T10:07:28.335138+00:00"
+  }
+]

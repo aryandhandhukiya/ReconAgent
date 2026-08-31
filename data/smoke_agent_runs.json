@@ -1,0 +1,150 @@
+[
+  {
+    "run_id": "RUN-20260827T172455.011428+0000",
+    "order_id": "ORD-SMOKE-001",
+    "observed_exception": {
+      "order_id": "ORD-SMOKE-001",
+      "exception_type": "MISSING_SETTLEMENT",
+      "workflow_status": "Auto-flagged",
+      "owner": "Finance Ops",
+      "sla_hours": 24,
+      "notes": [
+        "No settlement found for the ledger payment."
+      ],
+      "history": []
+    },
+    "investigation": {
+      "investigation": "The exception is MISSING_SETTLEMENT. Evidence: ['No settlement found for the ledger payment.']",
+      "action": "create_finance_task",
+      "reason": "No settlement record was seen in the ledger or settlement feed.",
+      "confidence": 0.75,
+      "source": "policy fallback",
+      "fallback_reason": "GenerativeModel.__init__() got an unexpected keyword argument 'system_instruction'"
+    },
+    "decision": {
+      "action_id": "ACT-0001",
+      "order_id": "ORD-SMOKE-001",
+      "exception_type": "MISSING_SETTLEMENT",
+      "workflow_status": "Auto-flagged",
+      "decision": "create_finance_task",
+      "priority": "HIGH",
+      "owner": "Finance Ops",
+      "sla_hours": 24,
+      "reason": "No settlement record was seen in the ledger or settlement feed.",
+      "evidence": [
+        "No settlement found for the ledger payment."
+      ],
+      "requires_approval": false,
+      "note": null,
+      "status": "Proposed",
+      "created_at": "2026-08-27T17:24:54.992413+00:00"
+    },
+    "action": {
+      "action_id": "ACT-0001",
+      "order_id": "ORD-SMOKE-001",
+      "exception_type": "MISSING_SETTLEMENT",
+      "workflow_status": "Auto-flagged",
+      "decision": "create_finance_task",
+      "priority": "HIGH",
+      "owner": "Finance Ops",
+      "sla_hours": 24,
+      "reason": "No settlement record was seen in the ledger or settlement feed.",
+      "evidence": [
+        "No settlement found for the ledger payment."
+      ],
+      "requires_approval": false,
+      "note": null,
+      "status": "Executed",
+      "created_at": "2026-08-27T17:24:54.992413+00:00",
+      "executed_at": "2026-08-27T17:24:55.001914+00:00",
+      "approval": "Not required"
+    },
+    "verification": {
+      "verified": true,
+      "next_status": "Action completed",
+      "verification": "Action result was recorded in the agent audit log."
+    },
+    "created_at": "2026-08-27T17:24:55.011428+00:00"
+  },
+  {
+    "run_id": "RUN-20260831T100728.345361+0000",
+    "order_id": "ORD-SMOKE-001",
+    "observed_exception": {
+      "order_id": "ORD-SMOKE-001",
+      "exception_type": "MISSING_SETTLEMENT",
+      "workflow_status": "Task created",
+      "owner": "Finance Ops",
+      "sla_hours": 24,
+      "notes": [
+        "No settlement found for the ledger payment."
+      ],
+      "history": [
+        {
+          "workflow_id": "WF-0017",
+          "order_id": "ORD-SMOKE-001",
+          "exception_type": "MISSING_SETTLEMENT",
+          "action": "create_finance_task",
+          "workflow_status": "Task created",
+          "priority": "HIGH",
+          "owner": "Finance Ops",
+          "sla_hours": 24,
+          "reason": "No settlement record was seen in the ledger or settlement feed.",
+          "note": "",
+          "created_at": "2026-08-27T17:24:54.101149+00:00",
+          "raw_json": "{\"workflow_id\": \"WF-0017\", \"order_id\": \"ORD-SMOKE-001\", \"exception_type\": \"MISSING_SETTLEMENT\", \"action\": \"create_finance_task\", \"workflow_status\": \"Task created\", \"priority\": \"HIGH\", \"owner\": \"Finance Ops\", \"sla_hours\": 24, \"reason\": \"No settlement record was seen in the ledger or settlement feed.\", \"note\": \"\", \"created_at\": \"2026-08-27T17:24:54.101149+00:00\"}"
+        }
+      ]
+    },
+    "investigation": {
+      "investigation": "Order ORD-SMOKE-001 has a ledger amount of 1500 with an active MISSING_SETTLEMENT exception. The notes and justification confirm that no settlement record was found in the ledger or settlement feed.",
+      "action": "investigate_exception",
+      "reason": "Because no settlement record exists in the settlement feed for the ledger payment of 1500, the exception must be investigated to determine whether the feed is delayed or the payment failed to settle.",
+      "confidence": 0.95,
+      "source": "Gemini"
+    },
+    "decision": {
+      "action_id": "ACT-0003",
+      "order_id": "ORD-SMOKE-001",
+      "exception_type": "MISSING_SETTLEMENT",
+      "workflow_status": "Auto-flagged",
+      "decision": "investigate_exception",
+      "priority": "HIGH",
+      "owner": "Finance Ops",
+      "sla_hours": 24,
+      "reason": "No settlement record was seen in the ledger or settlement feed.",
+      "evidence": [
+        "No settlement found for the ledger payment."
+      ],
+      "requires_approval": false,
+      "note": null,
+      "status": "Proposed",
+      "created_at": "2026-08-31T10:07:28.322139+00:00"
+    },
+    "action": {
+      "action_id": "ACT-0003",
+      "order_id": "ORD-SMOKE-001",
+      "exception_type": "MISSING_SETTLEMENT",
+      "workflow_status": "Auto-flagged",
+      "decision": "investigate_exception",
+      "priority": "HIGH",
+      "owner": "Finance Ops",
+      "sla_hours": 24,
+      "reason": "No settlement record was seen in the ledger or settlement feed.",
+      "evidence": [
+        "No settlement found for the ledger payment."
+      ],
+      "requires_approval": false,
+      "note": null,
+      "status": "Executed",
+      "created_at": "2026-08-31T10:07:28.322139+00:00",
+      "executed_at": "2026-08-31T10:07:28.335138+00:00",
+      "approval": "Not required"
+    },
+    "verification": {
+      "verified": true,
+      "next_status": "Action completed",
+      "verification": "Action result was recorded in the agent audit log."
+    },
+    "created_at": "2026-08-31T10:07:28.345361+00:00"
+  }
+]

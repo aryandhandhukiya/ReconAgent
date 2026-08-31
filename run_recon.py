@@ -16,6 +16,7 @@ import subprocess
 import sys
 import json
 import recon_engine
+import agent_actions
 
 
 def run_pipeline():
@@ -73,9 +74,13 @@ def run_pipeline():
             "order_id": result["order_id"],
             "payment_ref": result["payment_ref"],
             "exception_type": result["exception_type"],
+            "workflow_status": result.get("workflow_status", "Auto-flagged"),
             "severity": None,
             "likely_cause": None,
-            "suggested_action": None,
+            "suggested_action": result.get("recommended_action"),
+            "owner": result.get("owner"),
+            "sla_hours": result.get("sla_hours"),
+            "justification": result.get("justification"),
             "notes": result["notes"]
         }
         
@@ -113,7 +118,10 @@ def run_pipeline():
     
     import csv
     with open("data/exception_classifications.csv", "w", encoding="utf-8", newline="") as f:
-        fieldnames = ["order_id", "payment_ref", "exception_type", "severity", "likely_cause", "suggested_action", "notes"]
+        fieldnames = [
+            "order_id", "payment_ref", "exception_type", "severity", "likely_cause",
+            "suggested_action", "owner", "sla_hours", "justification", "notes"
+        ]
         writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
         for c in classifications:
@@ -123,6 +131,11 @@ def run_pipeline():
             writer.writerow(row)
     
     print("✅ Exceptions classified")
+
+    # Step 3b: Create controlled agent action proposals
+    print("\n[agent] Creating action proposals...")
+    action_plans = agent_actions.create_action_plans(classifications)
+    print(f"✅ {len(action_plans)} action proposal(s) saved to data/agent_action_log.json")
 
     # Step 4: LLM-powered plain-English explanations (Gemini)
     print("\n[4/4] Generating LLM explanations for exceptions...")
@@ -151,8 +164,11 @@ def run_pipeline():
             json.dump(classifications, f, indent=2)
 
         with open("data/exception_classifications.csv", "w", encoding="utf-8", newline="") as f:
-            fieldnames = ["order_id", "payment_ref", "exception_type", "severity",
-                          "likely_cause", "suggested_action", "llm_explanation", "notes"]
+            fieldnames = [
+                "order_id", "payment_ref", "exception_type", "severity",
+                "likely_cause", "suggested_action", "owner", "sla_hours",
+                "justification", "llm_explanation", "notes"
+            ]
             writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
             writer.writeheader()
             for c in classifications:

@@ -23,7 +23,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MODEL_NAME = "gemini-2.0-flash"
+MODEL_NAME = "gemini-3.6-flash"
 
 SYSTEM_INSTRUCTION = """You are a finance-ops assistant explaining payment reconciliation
 exceptions to a non-technical merchant. You will be given the exact structured data for

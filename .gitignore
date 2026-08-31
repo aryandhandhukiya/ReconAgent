@@ -15,6 +15,8 @@ data/exception_classifications.json
 data/exception_classifications.csv
 data/llm_exception_explanations.json
 data/accuracy_report.json
+data/agent_action_log.json
+data/agent_run_log.json
 
 # Local archives
 *.zip

@@ -196,6 +196,7 @@ def run_uploaded_reconciliation(ledger_file, settlement_file, bank_file):
     recon_path = Path(DATA_DIR) / "recon_results.json"
     with recon_path.open("w", encoding="utf-8") as file:
         json.dump(output, file, indent=2)
+    load_json.clear()
     return output
 
 
@@ -239,7 +240,7 @@ with st.form("upload_form"):
     bank_upload = st.file_uploader("Bank statement CSV", type=["csv"], key="bank_upload")
     submitted = st.form_submit_button("Start reconciliation")
 
-recon = None
+recon = st.session_state.get("uploaded_reconciliation")
 if submitted:
     if not (ledger_upload and settlement_upload and bank_upload):
         st.error("Please upload all three CSV files before starting reconciliation.")
@@ -259,6 +260,7 @@ if submitted:
                 recon = run_uploaded_reconciliation(ledger_path, settlement_path, bank_path)
 
             if recon is not None:
+                st.session_state["uploaded_reconciliation"] = recon
                 st.success(f"Reconciliation complete using uploaded files from {upload_folder}.")
         except ValueError as exc:
             st.error(f"CSV validation failed: {exc}")

@@ -18,7 +18,7 @@ The project combines deterministic reconciliation logic, business rule classific
 ReconAgent ingests three data sources:
 
 1. Internal ledger
-2. Settlement records
+2. Razorpay settlement records
 3. Bank statement / bank credit data
 
 It matches payments across these sources and flags issues such as:
@@ -149,6 +149,18 @@ The codebase is organized around a few core pieces:
 - accuracy_check.py — evaluation / validation helpers
 - llm_explainer.py — optional natural-language exception explanations
 
+### System architecture
+
+<p align="center">
+	<img src="system_architecture.png" alt="ReconAgent system architecture" width="100%">
+</p>
+
+### Reconciliation engine
+
+<p align="center">
+	<img src="reconciliation_engine.png" alt="ReconAgent reconciliation engine flow" width="70%">
+</p>
+
 ---
 
 ## Typical operating flow
@@ -180,6 +192,55 @@ The dashboard includes:
 
 ---
 
+## Project setup
+
+### Prerequisites
+
+- Python 3.11+
+- pip
+- Access to the project folder
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Environment variables
+
+If you want live integrations, configure the following environment values in a .env file or your shell environment:
+
+```bash
+GEMINI_API_KEY=
+RAZORPAY_KEY_ID=
+RAZORPAY_SECRET_KEY=
+SLACK_WEBHOOK_URL=
+GITHUB_TOKEN=
+```
+
+Note: the project is designed to degrade gracefully when many of these are not configured. The core reconciliation pipeline can still run without external API access.
+
+---
+
+## Run the project
+
+### Generate demo data
+
+```bash
+python recon_agent_generator.py
+```
+
+### Run the reconciliation pipeline
+
+```bash
+python run_recon.py
+```
+
+### Start the dashboard
+
+```bash
+streamlit run app.py
+```
 ---
 
 ## Data and output files
@@ -217,6 +278,19 @@ This is the kind of realistic operational scenario the project is built to model
 
 ---
 
+## Safety and design choices
+
+The project intentionally keeps source financial records immutable while storing action metadata separately. This makes it safer for demos, internal prototypes, and operational workflow experiments.
+
+Key safety principles:
+
+- no direct mutation of source CSVs during agent actions
+- decision logs are captured separately from raw data
+- workflow steps are auditable
+- external tools are used for investigation and escalation, not for changing financial truth
+
+---
+
 ## Use cases
 
 This project is suitable for:
@@ -240,3 +314,13 @@ This repository is best viewed as a finance workflow MVP and demo project rather
 This project is intended for educational, internal demo, and prototype use unless another license is specified in the repository.
 
 ---
+
+## Summary
+
+ReconAgent brings together three important capabilities:
+
+- reconciliation of multi-source financial data
+- exception detection and classification
+- agentic workflow execution for investigation and escalation
+
+Together, they offer a practical demo of how AI can support finance operations without replacing the system of record.
